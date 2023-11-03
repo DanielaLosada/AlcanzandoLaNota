@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="899.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocenteController" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1144.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocenteController">
+   <children>
+      <ImageView fitHeight="681.0" fitWidth="1213.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Docente.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="641.0" layoutX="239.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Imagen6.png" />
+         </image>
+      </ImageView>
+      <ComboBox layoutX="409.0" layoutY="157.0" prefHeight="39.0" prefWidth="327.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+      <AnchorPane fx:id="seleccionM" layoutX="152.0" layoutY="217.0" prefHeight="390.0" prefWidth="690.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 30 30 30 30;">
+         <children>
+            <TextField layoutX="33.0" layoutY="36.0" prefHeight="39.0" prefWidth="625.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+            <Label layoutX="50.0" layoutY="3.0" text="Ingrese el enunciado de la pregunta:" textFill="#1a5276">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSoyDocente" layoutX="588.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarVendedorEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="644.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/jo.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="128.0" layoutY="137.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField layoutX="128.0" layoutY="183.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField layoutX="128.0" layoutY="226.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField layoutX="128.0" layoutY="269.0" prefHeight="31.0" prefWidth="463.0" />
+            <Label layoutX="50.0" layoutY="94.0" text="Ingrese las posibles respuestas al enunciado:" textFill="#1a5276">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="314.0" text="Seleccione la respuesta correcta:" textFill="#1a5276">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="19.0" layoutY="325.0" prefHeight="39.0" prefWidth="327.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
