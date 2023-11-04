@@ -97,7 +97,7 @@
                   <Font name="Tw Cen MT" size="21.0" />
                </font>
             </Label>
-            <Button fx:id="btnCrearVF" layoutX="353.0" layoutY="239.0" mnemonicParsing="false" onAction="#crearPreguntaMEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #996633; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+            <Button fx:id="btnCrearVF" layoutX="353.0" layoutY="239.0" mnemonicParsing="false" onAction="#crearPreguntaVFEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #996633; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
                </font>
@@ -127,7 +127,7 @@
                   <Font name="Tw Cen MT" size="21.0" />
                </font>
             </Label>
-            <Button fx:id="btnCrearA" layoutX="353.0" layoutY="291.0" mnemonicParsing="false" onAction="#crearPreguntaMEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: cdb938; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+            <Button fx:id="btnCrearA" layoutX="353.0" layoutY="291.0" mnemonicParsing="false" onAction="#crearPreguntaAEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: cdb938; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
                </font>
@@ -146,5 +146,6 @@
          </children>
       </AnchorPane>
       <AnchorPane fx:id="vacio" layoutX="136.0" layoutY="210.0" prefHeight="403.0" prefWidth="705.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+      <Button fx:id="btnCrear" layoutX="973.0" layoutY="440.0" mnemonicParsing="false" onAction="#crearEvent" prefHeight="39.0" prefWidth="157.0" text="Crear Examen" />
    </children>
 </AnchorPane>

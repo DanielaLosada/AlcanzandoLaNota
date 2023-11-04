@@ -26,14 +26,21 @@ public class InicioController {
     private Aplicacion aplicacion;
 
     @FXML
-    void ingresarVendedorEvent(ActionEvent event) {
+    void ingresarDocenteEvent(ActionEvent event) {
+    	aplicacion.mostrarVentanaIniciarD();
+    }
 
+    @FXML
+    void ingresarEstudianteEvent(ActionEvent event) {
+    	aplicacion.mostrarVentanaIniciarE();
     }
     
-    public void setAplicacion(Aplicacion aplicacion) {
+	public void setAplicacion(Aplicacion aplicacion) {
 		this.aplicacion = aplicacion;
 
 	}
+	
+
     
 
 }

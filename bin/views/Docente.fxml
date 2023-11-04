@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1144.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocenteController">
    <children>
@@ -22,41 +22,130 @@
             <Image url="@../Imagenes/Imagen6.png" />
          </image>
       </ImageView>
-      <ComboBox layoutX="409.0" layoutY="157.0" prefHeight="39.0" prefWidth="327.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
-      <AnchorPane fx:id="seleccionM" layoutX="152.0" layoutY="217.0" prefHeight="390.0" prefWidth="690.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 30 30 30 30;">
+      <ComboBox fx:id="comboBoxTipoP" layoutX="409.0" layoutY="157.0" prefHeight="39.0" prefWidth="327.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+      <AnchorPane fx:id="seleccionM" layoutX="152.0" layoutY="217.0" prefHeight="396.0" prefWidth="683.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 30 30 30 30;">
          <children>
-            <TextField layoutX="33.0" layoutY="36.0" prefHeight="39.0" prefWidth="625.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+            <TextField fx:id="txtEnunciadoM" layoutX="33.0" layoutY="36.0" prefHeight="39.0" prefWidth="625.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
             <Label layoutX="50.0" layoutY="3.0" text="Ingrese el enunciado de la pregunta:" textFill="#1a5276">
                <font>
                   <Font name="Tw Cen MT" size="21.0" />
                </font>
             </Label>
-            <Button fx:id="btnSoyDocente" layoutX="588.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarVendedorEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+            <Button fx:id="btnCrearM" layoutX="588.0" layoutY="337.0" mnemonicParsing="false" onAction="#crearPreguntaMEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
                </font>
             </Button>
-            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="644.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="639.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/jo.png" />
                </image>
             </ImageView>
-            <TextField layoutX="128.0" layoutY="137.0" prefHeight="31.0" prefWidth="463.0" />
-            <TextField layoutX="128.0" layoutY="183.0" prefHeight="31.0" prefWidth="463.0" />
-            <TextField layoutX="128.0" layoutY="226.0" prefHeight="31.0" prefWidth="463.0" />
-            <TextField layoutX="128.0" layoutY="269.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField fx:id="txtResA" layoutX="128.0" layoutY="135.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField fx:id="txtResB" layoutX="128.0" layoutY="174.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField fx:id="txtResC" layoutX="128.0" layoutY="213.0" prefHeight="31.0" prefWidth="463.0" />
+            <TextField fx:id="txtResD" layoutX="128.0" layoutY="252.0" prefHeight="31.0" prefWidth="463.0" />
             <Label layoutX="50.0" layoutY="94.0" text="Ingrese las posibles respuestas al enunciado:" textFill="#1a5276">
                <font>
                   <Font name="Tw Cen MT" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="61.0" layoutY="314.0" text="Seleccione la respuesta correcta:" textFill="#1a5276">
+            <Label layoutX="61.0" layoutY="294.0" text="Seleccione la respuesta correcta:" textFill="#1a5276">
                <font>
                   <Font name="Tw Cen MT" size="21.0" />
                </font>
             </Label>
-            <ComboBox layoutX="19.0" layoutY="325.0" prefHeight="39.0" prefWidth="327.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+            <ComboBox fx:id="comboBoxCorrecta" layoutX="41.0" layoutY="322.0" prefHeight="31.0" prefWidth="495.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+            <Text fill="#ee0202" layoutX="98.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A)">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#ee0202" layoutX="98.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C)">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#ee0202" layoutX="98.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B)">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#ee0202" layoutX="98.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D)">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="guardarResM" fitHeight="25.0" fitWidth="24.0" layoutX="627.0" layoutY="294.0" onMouseClicked="#guardarMEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/comprobado.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="verdaderoF" layoutX="136.0" layoutY="214.0" prefHeight="396.0" prefWidth="705.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 30 30 30 30;">
+         <children>
+            <Label layoutX="44.0" layoutY="24.0" text="Ingrese el enunciado de la pregunta:" textFill="#996633">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEnunciadoVF" layoutX="14.0" layoutY="64.0" prefHeight="39.0" prefWidth="625.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+            <ComboBox fx:id="comboBoxVF" layoutX="265.0" layoutY="183.0" prefHeight="31.0" prefWidth="198.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
+            <Label layoutX="44.0" layoutY="132.0" text="Seleccione si es Verdadero o Falso:" textFill="#996633">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCrearVF" layoutX="353.0" layoutY="239.0" mnemonicParsing="false" onAction="#crearPreguntaVFEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #996633; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="409.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/jo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="92.0" layoutX="599.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/pregunta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="preguntaA" layoutX="136.0" layoutY="213.0" prefHeight="396.0" prefWidth="705.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 30 30 30 30;">
+         <children>
+            <Label layoutX="44.0" layoutY="24.0" text="Ingrese el enunciado de la pregunta:" textFill="#cdb938">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEnunciadoA" layoutX="14.0" layoutY="64.0" prefHeight="39.0" prefWidth="625.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+            <Label layoutX="44.0" layoutY="124.0" text="Ingrese la respuesta:" textFill="#cdb938">
+               <font>
+                  <Font name="Tw Cen MT" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCrearA" layoutX="353.0" layoutY="291.0" mnemonicParsing="false" onAction="#crearPreguntaAEvent" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: cdb938; -fx-background-radius: 30 30 30 30;" text="Crear" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="409.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/jo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtRespuestaA" layoutX="9.0" layoutY="155.0" prefHeight="122.0" prefWidth="683.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+            <ImageView fitHeight="79.0" fitWidth="92.0" layoutX="30.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/bombilla.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vacio" layoutX="136.0" layoutY="210.0" prefHeight="403.0" prefWidth="705.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 30 30;" />
+      <Button fx:id="btnCrear" layoutX="973.0" layoutY="440.0" mnemonicParsing="false" onAction="#crearEvent" prefHeight="39.0" prefWidth="157.0" text="Crear Examen" />
    </children>
 </AnchorPane>

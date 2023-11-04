@@ -23,12 +23,12 @@
             <Image url="@../../../DeliciasD_ElizaFinal/src/imagenes/spu3.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnSoyEstudiante" layoutX="430.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarVendedorEvent" prefHeight="53.0" prefWidth="166.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="ESTUDIANTE" textFill="WHITE">
+      <Button fx:id="btnSoyEstudiante" layoutX="430.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarEstudianteEvent" prefHeight="53.0" prefWidth="166.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="ESTUDIANTE" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed Extra Bold" size="27.0" />
          </font>
       </Button>
-      <Button fx:id="btnSoyDocente" layoutX="226.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarVendedorEvent" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="DOCENTE" textFill="WHITE">
+      <Button fx:id="btnSoyDocente" layoutX="226.0" layoutY="337.0" mnemonicParsing="false" onAction="#ingresarDocenteEvent" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: #1A5276; -fx-background-radius: 30 30 30 30;" text="DOCENTE" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed Extra Bold" size="27.0" />
          </font>
