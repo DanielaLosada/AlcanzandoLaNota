@@ -1,7 +1,6 @@
 package application;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 import controllers.DocenteController;
 import controllers.EstudianteController;

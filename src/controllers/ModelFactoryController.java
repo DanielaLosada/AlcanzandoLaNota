@@ -1,7 +1,13 @@
 package controllers;
 import java.util.ArrayList;
 
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import model.Examen;
+import model.Pregunta;
+import model.PreguntaAbierta;
+import model.PreguntaSMultiple;
+import model.PreguntaVF;
 
 public class ModelFactoryController {
 	
@@ -49,8 +55,41 @@ public class ModelFactoryController {
 	}
 	
     
-    private void inicializarDatos() {
+    public void inicializarDatos() {
     	examen= new Examen();
+//    	ArrayList<Pregunta> preguntas= new ArrayList<>();
+//    	PreguntaVF pregunta1= new PreguntaVF("¿La tierra es plana?", "Falso");
+//    	ArrayList<String> respuestasSM= new ArrayList<>();
+//    	respuestasSM.add("Manzana");
+//    	respuestasSM.add("Banano");
+//    	respuestasSM.add("Pera");
+//    	respuestasSM.add("Naranja");
+//    	PreguntaSMultiple pregunta2 = new PreguntaSMultiple("Fruta de color rojo", "Manzana");
+//    	pregunta2.setRespuestas(respuestasSM);
+//    	
+//    	ArrayList<String> respuestasSM2= new ArrayList<>();
+//    	respuestasSM2.add("Gato");
+//    	respuestasSM2.add("Lobo");
+//    	respuestasSM2.add("Perro");
+//    	respuestasSM2.add("Loro");
+//    	PreguntaSMultiple pregunta3 = new PreguntaSMultiple("Animal amigo del hombre", "Perro");
+//    	pregunta3.setRespuestas(respuestasSM2);
+//    	PreguntaAbierta pregunta4 = new PreguntaAbierta("Que es el sol", "Una estrella que da luz");
+//    	
+//    	PreguntaVF pregunta5= new PreguntaVF("¿El cielo es verde?", "Falso");
+//    	
+//    	PreguntaAbierta pregunta6 = new PreguntaAbierta("Explique el concepto de agua", "Sustancia vital para el ser humano");
+//    	
+//    	preguntas.add(pregunta3);
+//    	preguntas.add(pregunta1);
+//    	preguntas.add(pregunta2);
+//    	preguntas.add(pregunta4);
+//    	preguntas.add(pregunta5);
+//    	preguntas.add(pregunta6);    	
+//    	
+//    	
+//    	examen.setListaPreguntas(preguntas);
+//		return examen;
 	}
 
 	public void crearPreguntaA(String preguntaA, String posibleRA) {
@@ -66,8 +105,15 @@ public class ModelFactoryController {
 	}
 
 	public boolean verificarExamen() {
-		System.out.println(examen.getListaPreguntas());
-		return examen.verificar();
+		if(examen.verificar()==true){
+			retornarExamen();
+			return true;
+		}
+		return false;
+	}
+	
+	public Examen retornarExamen(){
+		return examen;
 	}
 	
 	

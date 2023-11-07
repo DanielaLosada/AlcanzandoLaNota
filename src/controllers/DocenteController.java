@@ -87,6 +87,14 @@ public class DocenteController {
     
     @FXML
     private Button btnCrear;
+    
+    @FXML
+    private Button btnSalir;
+    
+    @FXML
+    void salirEvent(ActionEvent event) {
+    	aplicacion.mostrarVentanaIniciar();
+    }
 
     @FXML
     void crearEvent(ActionEvent event) {
