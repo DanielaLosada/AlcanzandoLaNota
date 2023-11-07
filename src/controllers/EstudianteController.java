@@ -281,15 +281,26 @@ public class EstudianteController {
 	    return correctas.toString() +"\n"+ incorrectas.toString();
 	}
 	
-	private String calificar() {
+	
+	private double calificar() {
 		Examen examen = modelFactoryController.retornarExamen();
 		int preguntas = examen.getListaPreguntas().size();
 		int aciertos = respuestasA.size();
-		double ponderado = preguntas / 5;
-		double nota = aciertos * ponderado;
-		DecimalFormat formato = new DecimalFormat("#.##");
-		String numeroFormateado = formato.format(nota);
-		return numeroFormateado;
+
+		double notaPorcentaje = ((double) aciertos / preguntas) * 100.0;
+
+		double puntajeMaximo = 100.0;
+		double puntajeMinimo = 0.0;
+
+		double notaEscala = 1.0 + (notaPorcentaje - puntajeMinimo) / (puntajeMaximo - puntajeMinimo) * 4.0;
+
+		if (notaEscala < 1.0) {
+			return 1.0;
+		} else if (notaEscala > 5.0) {
+			return 5.0;
+		} else {
+			return Math.round(notaEscala * 100.0) / 100.0;
+		}
 	}
 
 }

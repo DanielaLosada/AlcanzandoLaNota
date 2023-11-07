@@ -40,7 +40,7 @@
       </AnchorPane>
       <AnchorPane fx:id="multiple" layoutX="264.0" layoutY="55.0" prefHeight="595.0" prefWidth="880.0">
          <children>
-            <ImageView fitHeight="603.0" fitWidth="886.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="604.0" fitWidth="884.0" layoutX="6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/Captura%20de%20pantalla%202023-11-06%20122639.png" />
                </image>
@@ -79,7 +79,7 @@
       </AnchorPane>
       <AnchorPane fx:id="VF" layoutX="264.0" layoutY="55.0" prefHeight="595.0" prefWidth="880.0">
          <children>
-            <ImageView fitHeight="603.0" fitWidth="886.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="610.0" fitWidth="874.0" layoutX="10.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/Captura%20de%20pantalla%202023-11-06%20122639.png" />
                </image>
@@ -102,11 +102,15 @@
             <ComboBox fx:id="comboBoxResVF" layoutX="164.0" layoutY="285.0" prefHeight="40.0" prefWidth="495.0" promptText="..." style="-fx-background-radius: 30 30 30 30; -fx-background-color: f5f2ee; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-text-fill: #999999;" />
          </children>
       </AnchorPane>
-      <ImageView fx:id="siguiente" fitHeight="40.0" fitWidth="41.0" layoutX="15.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="siguiente" fitHeight="58.0" fitWidth="60.0" layoutX="159.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Imagenes/flecha-correcta.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnEnviar" layoutX="15.0" layoutY="176.0" mnemonicParsing="false" onAction="#EnviarEvent" text="Enviar" />
+      <Button fx:id="btnEnviar" layoutX="111.0" layoutY="353.0" mnemonicParsing="false" onAction="#EnviarEvent" prefHeight="37.0" prefWidth="77.0" style="-fx-background-color: #27AE60; -fx-background-radius: 30 30 30 30;" text="Enviar" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

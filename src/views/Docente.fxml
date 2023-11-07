@@ -156,6 +156,10 @@
             <Image url="@../Imagenes/grifo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnSalir" layoutX="39.0" layoutY="103.0" mnemonicParsing="false" onAction="#salirEvent" text="Salir" />
+      <Button fx:id="btnSalir" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" onAction="#salirEvent" prefHeight="23.0" prefWidth="66.0" style="-fx-background-color: #27AE60; -fx-background-radius: 30 30 30 30;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

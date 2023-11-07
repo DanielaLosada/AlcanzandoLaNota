@@ -162,7 +162,7 @@ public class DocenteController {
     		modelFactoryController.crearPreguntaVF(preguntaVF, respuesta);
     		mostrarMensaje("Notificacion pregunta", "Pregunta creada", "Se ha creado con éxito la pregunta de elección verdadero o falso", AlertType.INFORMATION);
     		txtEnunciadoVF.setText("");
-    		comboBoxVF.getItems().clear();
+    		comboBoxVF.setValue(null);
     	}else{
 			mostrarMensaje("Notificacion pregunta", "Informacion invalida", "Informacion invalida", AlertType.ERROR);
 		}
